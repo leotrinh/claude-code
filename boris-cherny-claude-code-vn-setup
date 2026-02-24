@@ -1,0 +1,77 @@
+# Boris Cherny (@bcherny) - Cách tôi dùng Claude Code (Thread 02/01/2026)
+-  Ref: https://x.com/bcherny/status/2007179832300581177
+
+## Card 1: Giới thiệu
+Tôi là Boris, người tạo ra Claude Code.  
+Nhiều người hỏi tôi dùng Claude Code thế nào → đây là setup của tôi.
+
+Setup của tôi khá "vanilla" – Claude Code hoạt động tốt ngay từ đầu, không cần customize nhiều.  
+Mỗi người trong team Claude Code dùng theo cách rất khác nhau.
+
+## Card 2: 5 Claude song song trong Terminal
+Chạy 5 tab Claude cùng lúc (đánh số 1–5).  
+Dùng system notification để biết tab nào cần input.  
+→ Link config iTerm2: https://code.claude.com/docs/en/terminal-config#iterm-2-system-notifications
+
+## Card 3: Kết hợp Terminal + Web + Mobile
+Chạy song song 5–10 Claude trên https://claude.ai/code  
+Hand-off session giữa local ↔ web bằng lệnh & hoặc --teleport  
+Thỉnh thoảng khởi động session từ điện thoại (Claude iOS app) → check lại sau.
+
+## Card 4: Model & Thinking
+Dùng **Opus 4.5 + thinking** cho mọi thứ.  
+Dù chậm hơn Sonnet, nhưng steer ít hơn + tool use tốt hơn → tổng thể nhanh hơn.
+
+## Card 5: Claude.md – kiến thức chung của team
+Toàn team dùng chung 1 file https://code.claude.com/docs (check vào git).  
+Bất cứ khi nào Claude làm sai → thêm vào docs để lần sau nó biết.  
+Mỗi team khác tự maintain file docs riêng.
+
+## Card 6: Tag @.claude trong code review
+Trong PR của đồng nghiệp, tag @.claude để thêm rule vào docs.  
+Dùng Claude Code GitHub Action (/install-github-action).  
+Tương tự Compounding Engineering của @danshipper.
+
+## Card 7: Plan mode là bước quan trọng nhất
+Hầu hết session bắt đầu bằng **Plan mode** (shift+tab ×2).  
+Lên kế hoạch kỹ với Claude → khi ưng ý thì chuyển sang **auto-accept edits** → thường 1-shot xong PR.  
+Kế hoạch tốt quyết định 70–80% chất lượng.
+
+## Card 8: Slash commands cho inner-loop
+Tạo slash command cho mọi việc lặp lại nhiều lần/ngày.  
+Ví dụ: /commit-push-pr (tự động git status, commit, push, tạo PR).  
+Command lưu trong .claude/commands/ và check vào git.
+
+## Card 9: Sub-agents thường dùng
+- code-simplifier: simplify code sau khi Claude xong  
+- verify-app: test end-to-end Claude Code  
+→ coi subagent như automation cho các bước lặp lại trong PR.
+
+## Card 10: PostToolUse hook – format code
+Hook format code sau khi Claude generate → tránh lỗi CI vì format.
+
+## Card 11: Không dùng --dangerously-skip-permissions
+Thay vào đó dùng /permissions để pre-allow các lệnh bash an toàn.  
+Hầu hết rule lưu trong .claude/settings.json và share với team.
+
+## Card 12: Claude tự dùng tool bên ngoài
+Claude tự search/post Slack (qua MCP server), chạy BigQuery, lấy log Sentry…  
+Config Slack MCP lưu trong .mcp.json và share team.
+
+## Card 13: Long-running tasks + verification
+Với task dài:  
+a) Prompt Claude verify bằng background agent  
+b) Dùng agent Stop hook  
+c) Dùng plugin ralph-wiggum (@GeoffreyHuntley)  
+→ Dùng sandbox + --permission-mode=dontAsk để Claude tự chạy không bị hỏi permission.
+
+## Card 14: Bí quyết quan trọng nhất – Verification Loop
+Claude phải có cách **kiểm tra lại công việc của chính nó**.  
+→ Tăng 2–3× chất lượng output.
+
+Ví dụ: Claude tự test mọi thay đổi trên https://claude.ai/code bằng Chrome extension → mở browser, test UI, iterate đến khi ổn.
+
+## Card 15: Kết luận & hỏi ngược
+Setup của tôi là vậy.  
+Tips của bạn khi dùng Claude Code là gì?  
+Bạn muốn nghe thêm về phần nào tiếp theo?
