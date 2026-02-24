@@ -1,0 +1,76 @@
+# Boris Cherny (@bcherny) - How I Use Claude Code (Thread Jan 2, 2026)
+
+## Card 1: Introduction
+I'm Boris, creator of Claude Code.  
+Lots of people asked how I personally use it → here's my setup.
+
+My setup is surprisingly vanilla — Claude Code works great out of the box, no heavy customization needed.  
+Everyone on the Claude Code team uses it very differently.
+
+## Card 2: 5 Claudes running in parallel in Terminal
+I run 5 Claude instances in separate terminal tabs (numbered 1–5).  
+Use system notifications to know which tab needs my input.  
+→ iTerm2 config link: https://code.claude.com/docs/en/terminal-config#iterm-2-system-notifications
+
+## Card 3: Terminal + Web + Mobile combo
+Run 5–10 more Claudes in parallel on https://claude.ai/code  
+Hand-off sessions between local ↔ web using & or --teleport  
+Occasionally start sessions from my phone (Claude iOS app) in the morning → check back later.
+
+## Card 4: Model choice
+Use **Opus 4.5 with thinking** for literally everything.  
+Even though it's bigger/slower than Sonnet, less steering needed + better tool use → ends up faster overall.
+
+## Card 5: Shared claude.md knowledge base
+Whole team shares one https://code.claude.com/docs file (checked into git).  
+Whenever Claude does something wrong → we add a rule so it doesn't repeat next time.  
+Other teams maintain their own docs files.
+
+## Card 6: Tagging @.claude in code reviews
+In coworkers' PRs, I tag @.claude to suggest adding rules to the docs.  
+We use the Claude Code GitHub Action (/install-github-action).  
+Similar to @danshipper's Compounding Engineering concept.
+
+## Card 7: Plan mode is the most important step
+Most sessions start in **Plan mode** (shift+tab ×2).  
+Iterate on the plan with Claude until it's solid → then switch to **auto-accept edits** mode → usually lands the PR in one shot.  
+A great plan determines 70–80% of success.
+
+## Card 8: Slash commands for inner-loop workflows
+Create slash commands for anything I do many times a day.  
+Example: /commit-push-pr (auto git status, commit, push, create PR).  
+Commands stored in .claude/commands/ and checked into git.
+
+## Card 9: Frequently used sub-agents
+- code-simplifier: cleans up/simplifies code after main work  
+- verify-app: detailed end-to-end testing instructions for Claude Code  
+→ Treat subagents like reusable automation steps for most PRs.
+
+## Card 10: PostToolUse hook for formatting
+Hook auto-formats Claude's code output → catches the last 10% to avoid CI formatting failures.
+
+## Card 11: Avoid --dangerously-skip-permissions
+Instead, use /permissions to pre-allow safe bash commands.  
+Most rules saved in .claude/settings.json and shared with the team.
+
+## Card 12: Claude uses external tools itself
+Claude searches/posts to Slack (via MCP server), runs BigQuery queries, fetches Sentry logs, etc.  
+Slack MCP config checked into .mcp.json and shared team-wide.
+
+## Card 13: Handling long-running tasks + verification
+For long tasks:  
+a) Prompt Claude to verify with a background agent when done  
+b) Use agent Stop hook for determinism  
+c) Use ralph-wiggum plugin (idea from @GeoffreyHuntley)  
+→ Run in sandbox with --permission-mode=dontAsk so Claude cooks uninterrupted.
+
+## Card 14: The #1 secret to great results – Verification Loop
+Give Claude a reliable way to **verify its own work**.  
+→ Boosts final quality 2–3×.
+
+Example: Claude auto-tests every change to https://claude.ai/code using the Chrome extension → opens browser, tests UI, iterates until it feels good.
+
+## Card 15: Wrap-up + question back
+That's my setup in a nutshell.  
+What are your Claude Code tips?  
+What do you want to hear about next?
