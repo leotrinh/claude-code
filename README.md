@@ -1,6 +1,8 @@
 ## Claude Kit
 Ship Faster With AI Dev Teams
 [Buy here to save 25% (always) ](https://claudekit.cc/?ref=VAK416FU)
+[https://claudekit.cc/?ref=VAK416FU]()
+![https://claudekit.cc/?ref=VAK416FU](https://cdn.tinhtd.info/public/go1/ads_ck.png)
 ## Claude Code Notes
 
 ### Draft
