@@ -227,8 +227,10 @@ Alternatively, keep `settings.json` in git but leave `ANTHROPIC_AUTH_TOKEN` empt
 | Ollama returns format errors | API schema mismatch | Add a shim (LiteLLM or anthropic-proxy) between Ollama and Claude Code |
 
 ---
-## Ship by Claude Kit
-Ship faster with the AI Dev Team
+## Tips
+- Use ClaudeKit to ship faster and safer
+![Claude Code settings.json example](https://cdn.tinhtd.info/public/ai/claudecode/claude-kit-in-ext.png)
+- Buy ClaudeKit
 [DISCOUNT 20% - PAY ONE TIME, LIFETIME UPGRADE ](https://claudekit.cc/?ref=VAK416FU)
 ![https://claudekit.cc/?ref=VAK416FU](https://cdn.tinhtd.info/public/go1/ads_ck.png)
 
