@@ -22,6 +22,8 @@ Override them per-project via `.claude/settings.json` → `env` block, and Claud
 └── settings.json   ← lives in your project root (add to .gitignore if token is hardcoded)
 ```
 
+![Claude Code settings.json example](https://cdn.tinhtd.info/public/ai/claudecode/claude-settings-env.png)
+
 > 💡 **Tip:** Use a secrets manager or shell env vars for tokens in shared repos. The `env` block in `settings.json` is for convenience on local machines.
 
 ---
@@ -225,6 +227,10 @@ Alternatively, keep `settings.json` in git but leave `ANTHROPIC_AUTH_TOKEN` empt
 | Ollama returns format errors | API schema mismatch | Add a shim (LiteLLM or anthropic-proxy) between Ollama and Claude Code |
 
 ---
+## Ship by Claude Kit
+Ship faster with the AI Dev Team
+[DISCOUNT 20% - PAY ONE TIME, LIFETIME UPGRADE ](https://claudekit.cc/?ref=VAK416FU)
+![https://claudekit.cc/?ref=VAK416FU](https://cdn.tinhtd.info/public/go1/ads_ck.png)
 
 ## Contributing
 
