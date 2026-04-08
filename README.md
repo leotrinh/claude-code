@@ -7,9 +7,9 @@ Ship Faster With AI Dev Teams
 
 ### Draft
 Model: claude --model opus
-Dir: %USERPROFILE%/.claude/
-ClaudeKitDir:C:\Users\ADMIN\.claude
-Enable agent teams:
+- Dir: %USERPROFILE%/.claude/
+- ClaudeKitDir:C:\Users\ADMIN\.claude
+- Enable agent teams:
 ```
  "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
 ```
