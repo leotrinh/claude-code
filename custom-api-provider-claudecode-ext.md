@@ -228,8 +228,10 @@ Alternatively, keep `settings.json` in git but leave `ANTHROPIC_AUTH_TOKEN` empt
 
 ---
 ## Tips
-- Use ClaudeKit to ship faster and safer
+- Use ClaudeKit to ship faster and safer see what's ClaudeKit here https://tools.tinhtd.info/ai/claude-kit/introduce
+  
 ![Claude Code settings.json example](https://cdn.tinhtd.info/public/ai/claudecode/claude-kit-in-ext.png)
+
 - Buy ClaudeKit
 [DISCOUNT 20% - PAY ONE TIME, LIFETIME UPGRADE ](https://claudekit.cc/?ref=VAK416FU)
 ![https://claudekit.cc/?ref=VAK416FU](https://cdn.tinhtd.info/public/go1/ads_ck.png)
