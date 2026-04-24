@@ -82,6 +82,7 @@ Claude-native proxy — supports real Anthropic model IDs.
 
 ### 🔹 Minimax
 > BUY MINIMAX VIA THIS LINK TO SAVE 10% https://platform.minimax.io/subscribe/token-plan?code=3whkx7Le9S&source=link
+
 > Docs: https://platform.minimax.io/docs/token-plan/claude-code
 
 Routes all tiers to Minimax's own model (`MiniMax-M2.7`). Also sets a generous timeout for long agentic tasks.
